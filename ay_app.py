@@ -8,7 +8,8 @@ from data_manager import (
     mark_notification_read, mark_notifications_read_for_officer,
     save_uploaded_file, get_uploads_for_app
 )
-
+df_schools = pd.read_csv("TGM PATNERS.csv")
+PARTNER_SCHOOLS = df_schools["school_name"].tolist()
 st.set_page_config(page_title="TGM AppHub", page_icon="🎓", layout="wide", initial_sidebar_state="expanded")
 
 st.markdown("""
